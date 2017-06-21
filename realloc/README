@@ -1,0 +1,27 @@
+I purposely added --save-temps in gcc command, which retained all those temporary files created
+during build process.
+
+I used those files for one of the test-case.
+
+Test case #1
+$ ./out
+Parent process 42698.
+Child process 42699.
+% ls -l
+total 144
+-rw-rw-r-- 1 wtp wtp  1484 Jun 21 11:17 alloc.c
+-rw-rw-r-- 1 wtp wtp 86807 Jun 21 11:26 alloc.i
+-rw-rw-r-- 1 wtp wtp  8400 Jun 21 11:26 alloc.o
+-rw-rw-r-- 1 wtp wtp 15300 Jun 21 11:26 alloc.s
+-rw-rw-r-- 1 wtp wtp   102 Jun 21 11:20 Makefile
+-rwxrwxr-x 1 wtp wtp 16106 Jun 21 11:26 out
+-rw-rw-r-- 1 wtp wtp   205 Jun 21 11:24 README
+
+Test case #2
+$ ./out
+Parent process 42701.
+Child process 42702.
+% rm alloc.s alloc.o alloc.i
+
+
+
