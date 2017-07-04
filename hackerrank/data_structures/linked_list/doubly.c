@@ -59,6 +59,45 @@ Node *insert(Node *head, int data)
 	return head;
 }
 
+Node* Reverse(Node* head)
+{
+    // Complete this function
+    // Do not write the main method.
+	if(head == NULL || head->next == NULL)
+		return head;
+
+	Node *temp = head, *tail;
+	while(temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+
+	//save tail.
+	tail = temp;
+	// reassign head back to temp
+	temp = head;
+
+	// printf("taildata :%d, headdata: %d\n", tail->data, temp->data);	
+
+	while(temp != tail)
+	{
+		if(tail->next == temp)
+			break;
+		
+		int data;
+		data = temp->data;
+		temp->data = tail->data;
+		tail->data = data;
+
+		tail = tail->prev;
+		temp = temp->next;
+	}
+
+	return head;
+	
+}
+
+
 int main(int argc, char *argv[])
 {
 	if(argc < 2)
@@ -76,6 +115,20 @@ int main(int argc, char *argv[])
 	}
 
 	Node *swap = head;
+	while(swap)
+	{
+		printf("%d ",swap->data);
+		if(swap->next)
+			swap = swap->next;
+		else
+			break;
+	}
+
+	printf("\n");
+
+	swap = Reverse(head);
+	printf("Reverse order\n");
+	
 	while(swap)
 	{
 		printf("%d ",swap->data);
