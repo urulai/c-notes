@@ -1,0 +1,6 @@
+I have provided two implementations for the problem statement:
+
+One making use of dynamic memory allocation, but this solution was not accepted by hackerrank.
+Again, I implemented using variable length arrays, surprisingly, it was accepted.
+
+Added a script to run executable and compare the output files.

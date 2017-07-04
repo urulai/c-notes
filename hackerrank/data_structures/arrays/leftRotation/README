@@ -1,0 +1,4 @@
+In Hackerrank's problem statement, there is a constraint that says d, number of rotations will
+be less than equal to the number of elements in the array. If this constraint is relaxed, rotate.c
+will not work, so I coded rotate_no_constraints.c which can have any number of rotation regardless of
+the number of elements. Yes, of course, both numbers should be greater than zero.

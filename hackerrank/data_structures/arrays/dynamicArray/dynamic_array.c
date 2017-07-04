@@ -89,7 +89,9 @@ int main() {
 		if(dyn_arr[index].arr != NULL)
 			free(dyn_arr[index].arr);
 	}
-
+	
+	fclose(fInput); 
+	fclose(fOutput);
 	return 0;
 
 }
