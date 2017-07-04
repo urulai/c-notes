@@ -13,5 +13,5 @@ bubye.o: bubye.c
 	gcc -c bubye.c
 
 clean: 
-	rm -rf *.o out
+	rm -rf *.o out libgreeting.a
 

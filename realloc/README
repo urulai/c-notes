@@ -22,6 +22,3 @@ $ ./out
 Parent process 42701.
 Child process 42702.
 % rm alloc.s alloc.o alloc.i
-
-
-
